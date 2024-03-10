@@ -1,6 +1,9 @@
 <script lang="ts">
 	import * as config from '$lib/config'
+	import * as m from '$msgs';
+	import { page } from '$app/stores';
 </script>
+
 
 <nav>
   <!-- Title -->
@@ -10,14 +13,11 @@
 
   <!-- Navigation -->
 	<ul class="links">
-		<li>
-			<a href="/about">About</a>
+		<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+			<a href="/">{m.home()}</a>
 		</li>
-		<li>
-			<a href="/contact">Contact</a>
-		</li>
-		<li>
-			<a href="/rss.xml" target="_blank">RSS</a>
+		<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
+			<a href="/about">{m.about()}</a>
 		</li>
 	</ul>
 

@@ -18,7 +18,16 @@ const config = {
 		}),
 		paths: {
             base: process.env.NODE_ENV === 'production' ? '/sveltekit-github-pages' : '',
-        }
+        },
+		alias: {
+			$components: './src/components',
+			$lib: './src/lib',
+			$stores: './src/stores',
+			$styles: './src/styles',
+			$utils: './src/utils',
+			$paraglide: './src/paraglide',
+			$msgs: 'src/paraglide/messages.js'
+		},
     }
 };
  
