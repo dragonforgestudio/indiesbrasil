@@ -1,7 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from "mdsvex";
-const base = process.env.NODE_ENV === 'production' ? '' : ''
+const base = process.env.NODE_ENV === 'production' ? '/' : ''
  
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
