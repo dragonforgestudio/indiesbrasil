@@ -2,6 +2,8 @@
 	import * as config from '$lib/config'
 	import * as m from '$msgs';
 	import { page } from '$app/stores';
+	import { availableLanguageTags, languageTag } from "../paraglide/runtime.js"
+	import { i18n } from '$lib/i18n.js'
 </script>
 
 
@@ -21,8 +23,19 @@
 		</li>
 	</ul>
 
+	
+
   <!-- Theme -->
   <button>Toggle</button>
+  {#each availableLanguageTags as lang}
+	<a 
+		href={i18n.route($page.url.pathname)}
+		hreflang={lang}
+		aria-current={lang === languageTag() ? "page" : undefined}
+	>
+		{lang}
+	</a>
+{/each}
 </nav>
 
 <style>
