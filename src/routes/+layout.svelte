@@ -2,7 +2,7 @@
 	import Footer from './footer.svelte'
 	import Header from './header.svelte'
     import { ParaglideJS } from '@inlang/paraglide-js-adapter-sveltekit'
-	import { i18n } from 'lib/i18n.js'
+	import { i18n } from '$lib/i18n.js'
 
 	import 'open-props/style'
 	import 'open-props/normalize'
