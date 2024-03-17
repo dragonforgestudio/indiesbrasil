@@ -1,19 +1,19 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import { mdsvex } from "mdsvex";
-const base = process.env.NODE_ENV === 'production' ? '' : ''
- 
+import { mdsvex } from 'mdsvex';
+const base = process.env.NODE_ENV === 'production' ? '' : '';
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extends: "svelte-kit/tsconfig.json",
-	extensions: [".svelte", ".svx"],
+	extends: 'svelte-kit/tsconfig.json',
+	extensions: ['.svelte', '.svx'],
 	preprocess: [
-		vitePreprocess(),
+		vitePreprocess({}),
 		mdsvex({
-			extensions: [".svx"]
-		}),
+			extensions: ['.svx']
+		})
 	],
-    kit: {
+	kit: {
 		adapter: adapter({
 			fallback: `${base}/404.html`
 		}),
@@ -26,8 +26,8 @@ const config = {
 			$utils: './src/utils',
 			$paraglide: './src/paraglide',
 			$msgs: 'src/paraglide/messages.js'
-		},
-    }
+		}
+	}
 };
- 
+
 export default config;

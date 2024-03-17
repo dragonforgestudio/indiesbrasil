@@ -32,8 +32,6 @@
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
-		"flowbite": "^2.3.0",
-		"flowbite-svelte": "^0.44.24",
 		"open-props": "^1.6.21",
 		"postcss": "^8.4.32",
 		"postcss-load-config": "^5.0.2",
@@ -51,6 +49,8 @@
 	"type": "module",
 	"dependencies": {
 		"@inlang/paraglide-js-adapter-vite": "^1.2.22",
-		"mdsvex": "^0.11.0"
+		"mdsvex": "^0.11.0",
+		"flowbite": "^2.3.0",
+		"flowbite-svelte": "^0.44.24"
 	}
 }

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import * as config from '$lib/config'
 	import * as m from '$msgs';
-	import { page } from '$stores';
+	import { page } from '$app/stores';
 	import { availableLanguageTags, languageTag } from "../paraglide/runtime.js"
 	import { i18n } from '$lib/i18n.js'
 </script>
