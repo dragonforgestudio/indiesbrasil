@@ -1,10 +1,11 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from "mdsvex";
-const base = process.env.NODE_ENV === 'production' ? '/' : ''
+const base = process.env.NODE_ENV === 'production' ? '' : ''
  
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	extends: "svelte-kit/tsconfig.json",
 	extensions: [".svelte", ".svx"],
 	preprocess: [
 		vitePreprocess(),
@@ -16,9 +17,6 @@ const config = {
 		adapter: adapter({
 			fallback: `${base}/404.html`
 		}),
-		paths: {
-            base: '$app/paths',
-        },
 		alias: {
 			$app: './src',
 			$components: './src/components',

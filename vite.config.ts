@@ -1,6 +1,6 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import { paraglide } from "@inlang/paraglide-js-adapter-sveltekit/vite";
 import { defineConfig } from 'vitest/config';
-import { paraglide } from "@inlang/paraglide-js-adapter-sveltekit/vite"
 
 export default defineConfig({
 	plugins: [
